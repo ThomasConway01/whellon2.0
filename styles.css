@@ -908,4 +908,131 @@ html {
 .subject-card,
 .feature {
     animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Quiz Section */
+.quiz-section {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    background: var(--background-darker);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.quiz-question {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+.quiz-question h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.question-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.options {
+    display: grid;
+    gap: 1rem;
+}
+
+.option-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 157, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.option-btn:hover:not(:disabled) {
+    background: rgba(0, 255, 157, 0.1);
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.option-btn.correct {
+    background: rgba(0, 255, 157, 0.2);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.option-btn.incorrect {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.quiz-results {
+    text-align: center;
+    padding: 2rem;
+}
+
+.score-display {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+.score-display p {
+    margin: 1rem 0;
+}
+
+.result-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .quiz-section {
+        padding: 6rem 1rem 2rem;
+    }
+
+    .quiz-question {
+        padding: 1.5rem;
+    }
+
+    .option-btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .result-actions {
+        flex-direction: column;
+        align-items: center;
+    }
 } 

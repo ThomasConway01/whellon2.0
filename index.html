@@ -16,9 +16,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#maths" class="nav-link">Maths</a></li>
-                <li><a href="#reading" class="nav-link">Reading</a></li>
-                <li><a href="#spag" class="nav-link">SPAG</a></li>
+                <li><a href="#" onclick="startQuiz('maths')" class="nav-link">Maths</a></li>
+                <li><a href="#" onclick="startQuiz('reading')" class="nav-link">Reading</a></li>
+                <li><a href="#" onclick="startQuiz('spag')" class="nav-link">SPAG</a></li>
             </ul>
         </nav>
     </header>
@@ -44,7 +44,7 @@
                         <li>Fractions & Decimals</li>
                         <li>Geometry & Measures</li>
                     </ul>
-                    <a href="#maths-resources" class="neon-button">Start Maths</a>
+                    <a href="#" onclick="startQuiz('maths')" class="neon-button">Start Maths Quiz</a>
                 </div>
             </div>
 
@@ -58,7 +58,7 @@
                         <li>Text Analysis</li>
                         <li>Reading Strategies</li>
                     </ul>
-                    <a href="#reading-resources" class="neon-button">Start Reading</a>
+                    <a href="#" onclick="startQuiz('reading')" class="neon-button">Start Reading Quiz</a>
                 </div>
             </div>
 
@@ -72,7 +72,7 @@
                         <li>Sentence Structure</li>
                         <li>Word Classes</li>
                     </ul>
-                    <a href="#spag-resources" class="neon-button">Start SPAG</a>
+                    <a href="#" onclick="startQuiz('spag')" class="neon-button">Start SPAG Quiz</a>
                 </div>
             </div>
         </section>
@@ -111,6 +111,10 @@
                 <a href="#reading-resources" class="neon-button">Reading Tests</a>
                 <a href="#spag-resources" class="neon-button">SPAG Exercises</a>
             </div>
+        </section>
+
+        <section id="quiz-container" class="quiz-section" style="display: none;">
+            <!-- Quiz content will be dynamically inserted here -->
         </section>
     </main>
 
