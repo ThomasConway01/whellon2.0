@@ -795,7 +795,6 @@ class Quiz {
         this.subject = subject;
         this.currentQuestionIndex = 0; // Renamed for clarity
         this.score = 0;
-        // Select up to 50 questions, or fewer if not enough are available
         this.selectedQuestions = this.selectRandomQuestions(Math.min(50, this.questions.length));
     }
 
@@ -969,7 +968,7 @@ function showQuizResults() { // Renamed for clarity
     resultsDiv.className = 'quiz-results'; // This div will be centered
 
     resultsDiv.innerHTML = `
-        <h2>Quiz Complete!</h2>
+        <h2>Quiz ${currentQuiz.subject} Complete!</h2>
         <div class="score-display">
             <p>Your Score: ${scoreData.score}/${scoreData.total}</p>
             <p>Percentage: ${scoreData.percentage}%</p>
