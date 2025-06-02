@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="cyber-grid"></div>
+    <div class="glitch-overlay"></div>
+    
     <header>
         <nav class="nav-container">
             <div class="logo">
@@ -16,10 +19,10 @@
                 <span class="logo-text">Whellon<span class="highlight">2.0</span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#" onclick="startQuiz('maths')" class="nav-link">Maths</a></li>
-                <li><a href="#" onclick="startQuiz('reading')" class="nav-link">Reading</a></li>
-                <li><a href="#" onclick="startQuiz('spag')" class="nav-link">SPAG</a></li>
+                <li><button type="button" onclick="returnToHome()" class="nav-link active">Home</button></li>
+                <li><button type="button" onclick="startQuiz('maths')" class="nav-link">Maths</button></li>
+                <li><button type="button" onclick="startQuiz('reading')" class="nav-link">Reading</button></li>
+                <li><button type="button" onclick="startQuiz('spag')" class="nav-link">SPAG</button></li>
             </ul>
         </nav>
     </header>
@@ -45,7 +48,7 @@
                         <li>Fractions & Decimals</li>
                         <li>Geometry & Measures</li>
                     </ul>
-                    <a href="#" onclick="startQuiz('maths')" class="neon-button">Start Maths Quiz</a>
+                    <button type="button" onclick="startQuiz('maths')" class="neon-button">Start Maths Quiz</button>
                 </div>
             </div>
 
@@ -59,7 +62,7 @@
                         <li>Text Analysis</li>
                         <li>Reading Strategies</li>
                     </ul>
-                    <a href="#" onclick="startQuiz('reading')" class="neon-button">Start Reading Quiz</a>
+                    <button type="button" onclick="startQuiz('reading')" class="neon-button">Start Reading Quiz</button>
                 </div>
             </div>
 
@@ -73,7 +76,7 @@
                         <li>Sentence Structure</li>
                         <li>Word Classes</li>
                     </ul>
-                    <a href="#" onclick="startQuiz('spag')" class="neon-button">Start SPAG Quiz</a>
+                    <button type="button" onclick="startQuiz('spag')" class="neon-button">Start SPAG Quiz</button>
                 </div>
             </div>
         </section>
@@ -108,9 +111,9 @@
             <h2>Ready to Start?</h2>
             <p>Choose your subject and begin your revision journey today</p>
             <div class="quick-links">
-                <a href="#maths-resources" class="neon-button">Maths Practice</a>
-                <a href="#reading-resources" class="neon-button">Reading Tests</a>
-                <a href="#spag-resources" class="neon-button">SPAG Exercises</a>
+                <button onclick="startQuiz('maths')" class="neon-button">Maths Practice</button>
+                <button onclick="startQuiz('reading')" class="neon-button">Reading Tests</button>
+                <button onclick="startQuiz('spag')" class="neon-button">SPAG Exercises</button>
             </div>
         </section>
 
@@ -151,6 +154,11 @@
             <p>&copy; 2024 Whellon. All rights reserved.</p>
         </div>
     </footer>
-    <script src="quiz.js"></script>
+
+    <!-- Load scripts in correct order -->
+    <script src="math.js"></script>
+    <script src="reading.js"></script>
+    <script src="spag.js"></script>
+    <script src="script.js"></script>
 </body>
 </html> 
